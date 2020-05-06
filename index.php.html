@@ -1,0 +1,64 @@
+<!doctype html>
+<?php
+
+// Inialize session
+session_start();
+
+// Check, if username session is NOT set then this page will jump to login page
+if (!isset($_SESSION['user'])) {
+header('Location: career.php');
+}
+
+?>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body style="margin: black">
+        <h2> 
+         </h2>
+         
+        <div>
+            <input type="button" class="convertClass" style="float: right; background-color:rgb(76, 199, 178);" onclick="alert('Confirm to logout')" value="LOGOUT">
+        <br>
+        <form action="convertToHtml.php"  method="post">	
+            <input type="submit" style=" background-color:rgb(76, 199, 178);" value="ConvertToHtml">
+        </form>
+        <br>
+        <form action="convertToXml.php"  method="post">	
+            <input type="submit" style=" background-color:rgb(76, 199, 178);" value="convertToXml">
+        </form>
+        <br>
+        <form action="convertToSql.php"  method="post">	
+            <input type="submit" style="background-color:rgb(76, 199, 178);" value="convertToSql">
+        </form>
+        <br>
+        <form action="convertToPhp.php"  method="post">	
+            <input type="submit" style="background-color:rgb(76, 199, 178);" value="convertToPhp">
+        </form>
+        <br>
+        <form action="convertToJson.php"  method="post">	
+            <input type="submit" style="background-color:rgb(76, 199, 178);" value="convertToJson">
+        </form>
+        <br>
+    </div>
+    <div>
+        <form action="part2.php"  method="post">	
+            <input type="submit" style="background-color:rgb(76, 199, 178);" value="part2">
+        </form>
+        <br>
+    </div>
+    <div>
+        <form action="part3.php"  method="post">	
+            <input type="submit" style="background-color:rgb(76, 199, 178);" value="part3">
+        </form>
+        <br>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
